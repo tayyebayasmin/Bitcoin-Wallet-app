@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52.532" height="64.043" viewBox="0 0 52.532 64.043">
+  <defs>
+    <filter id="unlock" x="0" y="0" width="52.532" height="64.043" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#unlock)">
+    <path id="unlock-2" data-name="unlock" d="M30.216,17.266H9.592V11.511a7.674,7.674,0,0,1,15.347,0,1.919,1.919,0,0,0,3.837,0,11.511,11.511,0,0,0-23.022,0v5.755H4.316A4.322,4.322,0,0,0,0,21.583V41.727a4.322,4.322,0,0,0,4.317,4.317h25.9a4.322,4.322,0,0,0,4.317-4.317V21.583a4.322,4.322,0,0,0-4.317-4.317Zm0,0" transform="translate(9 6)" fill="#fc4646"/>
+  </g>
+</svg>

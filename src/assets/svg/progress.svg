@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="342" height="45" viewBox="0 0 342 45">
+  <g id="Group_411" data-name="Group 411" transform="translate(-41 -164)">
+    <line id="Line_20" data-name="Line 20" x2="99" transform="translate(103.5 176.5)" fill="none" stroke="blue" stroke-width="1"/>
+    <line id="Line_21" data-name="Line 21" x2="99" transform="translate(225.5 176.5)" fill="none" stroke="blue" stroke-width="1"/>
+    <rect id="Rectangle_108" data-name="Rectangle 108" width="24" height="24" transform="translate(80 164)" fill="blue"/>
+    <rect id="Rectangle_110" data-name="Rectangle 110" width="24" height="24" transform="translate(202 164)" fill="blue" opacity="0.27"/>
+    <rect id="Rectangle_109" data-name="Rectangle 109" width="24" height="24" transform="translate(324 164)" fill="blue" opacity="0.27"/>
+    <text id="Create_Password" data-name="Create Password" transform="translate(41 205)" fill="#1c1c1c" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Create Password</tspan></text>
+    <text id="Secure_Wallet" data-name="Secure Wallet" transform="translate(173 205)" fill="#1c1c1c" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Secure Wallet</tspan></text>
+    <text id="Confirm_Phrase" data-name="Confirm Phrase" transform="translate(336 205)" fill="#1c1c1c" font-size="12" font-family="Poppins-Regular, Poppins"><tspan x="-46.242" y="0">Confirm Phrase</tspan></text>
+  </g>
+</svg>

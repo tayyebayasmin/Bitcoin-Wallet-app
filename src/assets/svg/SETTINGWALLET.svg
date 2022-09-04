@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Group_487" data-name="Group 487" transform="translate(-19 -84)">
+    <rect id="Rectangle_151" data-name="Rectangle 151" width="40" height="40" rx="7" transform="translate(19 84)" fill="#38d15b"/>
+    <path id="Icon_awesome-wallet" data-name="Icon awesome-wallet" d="M21.347,6.693H3.7a.741.741,0,1,1,0-1.481H21.477a.74.74,0,0,0,.741-.741A2.222,2.222,0,0,0,20,2.25H2.962A2.962,2.962,0,0,0,0,5.212V20.024a2.962,2.962,0,0,0,2.962,2.962H21.347A2.292,2.292,0,0,0,23.7,20.764V8.915A2.292,2.292,0,0,0,21.347,6.693Zm-2.092,9.628a1.481,1.481,0,1,1,1.481-1.481A1.481,1.481,0,0,1,19.255,16.321Z" transform="translate(27.15 91.382)" fill="#fff"/>
+  </g>
+</svg>

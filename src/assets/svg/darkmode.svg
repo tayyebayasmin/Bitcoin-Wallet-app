@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Group_484" data-name="Group 484" transform="translate(-19 -149)">
+    <rect id="Rectangle_152" data-name="Rectangle 152" width="40" height="40" rx="7" transform="translate(19 149)" fill="#171717"/>
+    <path id="Icon_feather-moon" data-name="Icon feather-moon" d="M31.5,19.185A13.5,13.5,0,1,1,16.815,4.5,10.5,10.5,0,0,0,31.5,19.185Z" transform="translate(21.349 151.029)" fill="#fff"/>
+    <path id="Icon_awesome-star" data-name="Icon awesome-star" d="M3.474.151,2.918,1.278l-1.244.181a.273.273,0,0,0-.151.465l.9.877L2.211,4.04a.272.272,0,0,0,.4.287l1.113-.585,1.113.585a.272.272,0,0,0,.4-.287L5.014,2.8l.9-.877a.273.273,0,0,0-.151-.465L4.519,1.278,3.963.151a.273.273,0,0,0-.489,0Z" transform="translate(39.395 155.53)" fill="#fff"/>
+    <path id="Icon_awesome-star-2" data-name="Icon awesome-star" d="M3.474.151,2.918,1.278l-1.244.181a.273.273,0,0,0-.151.465l.9.877L2.211,4.04a.272.272,0,0,0,.4.287l1.113-.585,1.113.585a.272.272,0,0,0,.4-.287L5.014,2.8l.9-.877a.273.273,0,0,0-.151-.465L4.519,1.278,3.963.151a.273.273,0,0,0-.489,0Z" transform="translate(45.853 162.821)" fill="#fff"/>
+  </g>
+</svg>

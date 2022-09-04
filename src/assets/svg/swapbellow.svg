@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="Group_450" data-name="Group 450" transform="translate(-169 -799)">
+    <g id="Ellipse_41" data-name="Ellipse 41" transform="translate(169 799)" fill="none" stroke="#1c1c1c" stroke-width="1">
+      <circle cx="13" cy="13" r="13" stroke="none"/>
+      <circle cx="13" cy="13" r="12.5" fill="none"/>
+    </g>
+    <path id="Icon_material-swap-vert" data-name="Icon material-swap-vert" d="M8.891,11.324V5.658H7.275v5.666H4.85l3.233,3.225,3.233-3.225ZM3.233,0,0,3.225H2.425V8.891H4.041V3.225H6.466Z" transform="translate(189.783 806.833) rotate(90)" fill="#1c1c1c"/>
+  </g>
+</svg>

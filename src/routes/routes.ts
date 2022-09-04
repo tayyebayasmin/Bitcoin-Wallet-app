@@ -1,0 +1,26 @@
+const ScreenNames = {
+  WELCOME:'WelcomeScreen',
+  STARTED:'StartedScreen',
+  INSTRUCTION:'InstructionScreen',
+  SETUP_PASSCODE:'SetupPasscode',
+  MNEMONICS:'MnemonicsScreen',
+  BACKUP_MNEMONICS:'BackupMnemonics',
+  IMPORTSCREEN1:'ImportScreen1',
+  IMPORTSCREEN2:'ImportScreen2',
+  IMPORTSCREEN3:'ImportScreen3',
+  SPLASHSCREEN:'SplashScreen',
+  MNEMONICS_FIELDS:'MnemonicsFields',
+  RECIEVESCREEN:'RecieveScreen',
+  HOMESCREEN:'Home',
+  NOTIFICATION:'NotificationScreen',
+  RECIEVECOINS:'RecieveCoin',
+  BUYCOIN:'BuyCoin',
+  PAYMENT:'PaymentScreen',
+  SENDSCREEN:'SendScreen',
+  ADD_TOKENS: 'AddTokens',
+  BUYSCREEN: 'BuyScreen',
+  LOADING:'Loading',
+  ADD_MAINNET: 'AddMainnet',
+
+};
+export default ScreenNames;
