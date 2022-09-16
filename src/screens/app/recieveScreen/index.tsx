@@ -15,31 +15,31 @@ const RecieveScreen = ({ navigation }: NativeStackScreenProps<any>) => {
     const [isEnabled, setIsEnabled] = useState(false);
     const [search, setSearch] = useState("");
     const [filteredDataSource, setFilteredDataSource] = useState(Mainnets);
-    const searchFilterFunction = (text:string) => {
+    const searchFilterFunction = (text: string) => {
         if (text) {
-         
-          const newData = Mainnets.filter(function (item) {
-            const itemData = item.name
-              ? item.name.toUpperCase()
-              : "".toUpperCase();
-            const textData = text.toUpperCase();
-            return itemData.indexOf(textData) > -1;
-          });
-          console.log(newData)
-          setFilteredDataSource(newData);
-          setSearch(text);
+
+            const newData = Mainnets.filter(function (item) {
+                const itemData = item.name
+                    ? item.name.toUpperCase()
+                    : "".toUpperCase();
+                const textData = text.toUpperCase();
+                return itemData.indexOf(textData) > -1;
+            });
+            console.log(newData)
+            setFilteredDataSource(newData);
+            setSearch(text);
         } else {
-          setFilteredDataSource( Mainnets);
-          setSearch(text);
+            setFilteredDataSource(Mainnets);
+            setSearch(text);
         }
-      };
-  
+    };
+
 
     return (
         <ScreenWrapper>
             <View style={{ backgroundColor: AppColors.primary, padding: width(3), flexDirection: 'row', alignItems: 'center' }}>
                 <TouchableOpacity
-                onPress={()=>navigation.goBack()}>
+                    onPress={() => navigation.goBack()}>
                     <SVGIcons.leftArrow />
                 </TouchableOpacity>
                 <TextInput
@@ -54,29 +54,29 @@ const RecieveScreen = ({ navigation }: NativeStackScreenProps<any>) => {
             <ScrollView
                 showsVerticalScrollIndicator={false}
             >
-                {filteredDataSource.map((Mainnet,i) => {
+                {filteredDataSource.map((Mainnet, i) => {
                     // console.log(Mainnet)
                     return (
 
                         <TouchableOpacity
-                        onPress={()=>
-                            navigation.navigate(ScreenNames.RECIEVECOINS,{
-                                name:Mainnet.name,
-                                nickname:Mainnet.Nickname
+                            onPress={() =>
+                                navigation.navigate(ScreenNames.RECIEVECOINS, {
+                                    name: Mainnet.name,
+                                    nickname: Mainnet.Nickname
 
-                              })
-                        }
+                                })
+                            }
                         >
-                        <View style={styles.container}>
+                            <View style={styles.container}>
 
-                            <Mainnet.icon />
-                            <SmallText size={4.4} textStyles={styles.txt}>{Mainnet.name}</SmallText>
-                            <View style={{ right: 0, position: "absolute" }}>
-                               <SmallText>{Mainnet.recieve} {Mainnet.Nickname}</SmallText>
-                   
+                                <Mainnet.icon />
+                                <SmallText size={4.4} textStyles={styles.txt}>{Mainnet.name}</SmallText>
+                                <View style={{ right: 0, position: "absolute" }}>
+                                    <SmallText>{Mainnet.recieve} {Mainnet.Nickname}</SmallText>
+
+                                </View>
+
                             </View>
-
-                        </View>
                         </TouchableOpacity>
                     )
                 })
@@ -84,7 +84,12 @@ const RecieveScreen = ({ navigation }: NativeStackScreenProps<any>) => {
                 }
             </ScrollView>
 
-            <BottomBar />
+            <BottomBar
+                OnPressWallet={() => navigation.navigate(ScreenNames.HOMESCREEN)}
+                OnPressSwap={() => navigation.navigate(ScreenNames.SWAPSCREEN)}
+                OnPressNFTs={() => navigation.navigate(ScreenNames.NFT_Screen)}
+                OnPressDiscover={() => navigation.navigate(ScreenNames.DISCOVERSCREEN)}
+            />
             {/* </View> */}
         </ScreenWrapper >
     );

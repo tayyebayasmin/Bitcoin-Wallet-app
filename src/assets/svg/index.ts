@@ -77,8 +77,65 @@ import darkmode from './darkmode.svg'
 import security from './security.svg'
 import SETTINGWALLET from './SETTINGWALLET.svg'
 import right from './right.svg'
-
+import bnb from './bnb.svg'
+import palkadot from './palkadot.svg'
+import SwapArrow from './SwapArrow.svg'
+import nftimage from './nftimage.svg'
+import bluearrow from './bluearrow.svg'
+import binanaceSmall from './binanaceSmall.svg'
+import ethereumSmall from './ethereumSmall.svg'
+import polygonSmall from './polygonSmall.svg'
+import Icollection1 from './Icollection1.svg'
+import Icollection2 from './Icollection2.svg'
+import Icollection3 from './Icollection3.svg'
+import Icollection4 from './Icollection4.svg'
+import Icollection5 from './Icollection5.svg'
+import sport from './sport.svg'
+import art from './art.svg'
+import comics from './comics.svg'
+import domain from './domain.svg'
+import virtualWorld from './virtualWorld.svg'
+import tron from './tron.svg'
+import avax2 from './avax2.svg'
+import klay from './klay.svg'
+import terra from './terra.svg'
+import casper from './casper.svg'
+import solana from './solana.svg'
+import wallet2 from './wallet2.svg'
+import dot from './dot3.svg'
+import deletesvg from './deletesvg.svg'
+import save from './save.svg'
+import error from './error.svg'
 const SVGIcons = {
+    error,
+    save,
+    deletesvg,
+    dot,
+    solana,
+    wallet2,
+    casper,
+    terra,
+    klay,
+    avax2,
+    tron,
+    sport,
+    art,
+    comics,
+    domain,
+    virtualWorld,
+    Icollection1,
+    Icollection2,
+    Icollection3,
+    Icollection4,
+    Icollection5,
+    polygonSmall,
+    ethereumSmall,
+    binanaceSmall,
+    bluearrow,
+    nftimage,
+    SwapArrow,
+    palkadot,
+    bnb,
     right,
     about,
     youtube,

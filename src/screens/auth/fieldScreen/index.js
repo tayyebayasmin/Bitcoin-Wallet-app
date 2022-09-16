@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Pressable, Text, TouchableOpacity, View, DevSettings, TextInput } from 'react-native';
 import { ScreenWrapper } from 'react-native-screen-wrapper';
 import SVGIcons from '~assets/svg';
@@ -10,8 +10,9 @@ import { height, width } from '~utills/Dimensions';
 import styles from './styles';
 import { FontFamily } from '~assets/fonts';
 
-const MnemonicsFields = ({ navigation }) => {
-    var arrayofWords = ['involve', 'shaft', 'magnet', 'between', 'sauce', 'wood', 'increase', 'usual', 'hour', 'fine', 'pave', 'solve']
+const MnemonicsFields = ({ navigation, route }) => {
+    const { data } = route.params
+    const [names,setnames]=useState(data)
     return (
         <ScreenWrapper
             scrollType="scroll"
@@ -38,25 +39,29 @@ const MnemonicsFields = ({ navigation }) => {
                 </SmallText>
                 <View style={[styles.table, styles.field]}>
                     {
-                        arrayofWords.map((item,index) => {
+                        names.map((item, index) => {
                             return (
-                            <View style={{flexDirection:'row'}}> 
-                            <MediumText size={5} fontFamily={FontFamily.poppinsRegular} color={AppColors.black} textStyles={styles.txt}>{index+1}</MediumText>
-                                <TextInput
-                                    style={styles.input}
-                                    // onChangeText={onChangeNumber}
-                                    keyboardType="default"
-                                />
-                            </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <MediumText size={5} fontFamily={FontFamily.poppinsRegular} color={AppColors.black} textStyles={styles.txt}>{index + 1}</MediumText>
+                                    <TextInput
+                                        style={styles.input}
+                                        onChangeText={(e)=>{
+                                        names[index][1]=e
+                                          
+                                        }}
+                                        keyboardType="default"
+                                        defaultValue={item[1]}
+                                    />
+                                </View>
                             )
                         })}
                 </View>
-                <View style={styles.table}>
+                <View style={[styles.table, styles.extra]}>
                     {
-                        arrayofWords.map((data) => {
+                        names.map((item) => {
                             return (
                                 <View style={styles.innerBox} >
-                                    <SmallText >{data}</SmallText>
+                                    <SmallText >{item[1]}</SmallText>
                                 </View>
                             )
                         })

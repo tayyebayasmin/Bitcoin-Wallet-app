@@ -80,8 +80,12 @@ const BuyScreen = ({ navigation }: NativeStackScreenProps<any>) => {
                 }
             </ScrollView>
 
-            <BottomBar />
-            {/* </View> */}
+            <BottomBar
+                OnPressWallet={() => navigation.navigate(ScreenNames.HOMESCREEN)}
+                OnPressSwap={() => navigation.navigate(ScreenNames.SWAPSCREEN)}
+                OnPressNFTs={() => navigation.navigate(ScreenNames.NFT_Screen)}
+                OnPressDiscover={() => navigation.navigate(ScreenNames.DISCOVERSCREEN)}
+            />
         </ScreenWrapper >
     );
 };

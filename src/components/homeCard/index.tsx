@@ -13,8 +13,9 @@ interface Props {
     onPressRecieve?(): void;
     onPressBuy?(): void;
     onPressSwap?(): void;
-    onPressSetting?():void;
-
+    onPressSetting?(): void;
+    iconRow?:Boolean;
+    profileShow?:Boolean
 }
 const HomeCard = ({
     onPressNotification,
@@ -23,7 +24,9 @@ const HomeCard = ({
     onPressRecieve,
     onPressSend,
     onPressSwap,
-    onPressSetting
+    onPressSetting,
+    iconRow = true,
+    profileShow= true
 }: Props) => {
 
     return (
@@ -31,67 +34,70 @@ const HomeCard = ({
             <View style={styles.container}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <TouchableOpacity
-                    onPress={onPressSetting}>
+                        onPress={onPressSetting}>
                         <SVGIcons.settings />
                     </TouchableOpacity>
+                   { profileShow &&
                     <View style={styles.profile}>
                         <SVGIcons.profile />
                         <SmallText size={4}>My Wallet</SmallText>
                         <SmallText size={6} fontFamily={FontFamily.poppinsSemiBold}>$0.00</SmallText>
                     </View>
+                    }
                     <TouchableOpacity
                         onPress={onPressNotification}>
                         <SVGIcons.notification />
                     </TouchableOpacity>
                 </View>
-                <View style={styles.iconRow}>
+                {iconRow &&
+                    <View style={styles.iconRow}>
 
-                    <TouchableOpacity
-                        onPress={onPressScan}
-                    >
+                        <TouchableOpacity
+                            onPress={onPressScan}
+                        >
 
-                        <View style={styles.icon}>
-                            <SVGIcons.scan />
-                        </View>
-                        <SmallText size={3} textAlign='center'>Scan</SmallText>
-                    </TouchableOpacity>
+                            <View style={styles.icon}>
+                                <SVGIcons.scan />
+                            </View>
+                            <SmallText size={3} textAlign='center'>Scan</SmallText>
+                        </TouchableOpacity>
 
-                    <TouchableOpacity
-                        onPress={onPressSend}
+                        <TouchableOpacity
+                            onPress={onPressSend}
 
-                    >
-                        <View style={styles.icon}>
-                            <SVGIcons.send />
-                        </View>
-                        <SmallText size={3} textAlign='center'>Send</SmallText>
-                    </TouchableOpacity>
+                        >
+                            <View style={styles.icon}>
+                                <SVGIcons.send />
+                            </View>
+                            <SmallText size={3} textAlign='center'>Send</SmallText>
+                        </TouchableOpacity>
 
-                    <TouchableOpacity
-                        onPress={onPressRecieve}
-                    >
-                        <View style={styles.icon}>
-                            <SVGIcons.recieve />
-                        </View>
-                        <SmallText size={3} textAlign='center'>Recieve</SmallText>
-                    </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={onPressRecieve}
+                        >
+                            <View style={styles.icon}>
+                                <SVGIcons.recieve />
+                            </View>
+                            <SmallText size={3} textAlign='center'>Recieve</SmallText>
+                        </TouchableOpacity>
 
-                    <TouchableOpacity
-                    onPress={onPressBuy}>
-                        <View style={styles.icon}>
-                            <SVGIcons.buy />
-                        </View>
-                        <SmallText size={3} textAlign='center'>Buy</SmallText>
-                    </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={onPressBuy}>
+                            <View style={styles.icon}>
+                                <SVGIcons.buy />
+                            </View>
+                            <SmallText size={3} textAlign='center'>Buy</SmallText>
+                        </TouchableOpacity>
 
-                    <TouchableOpacity
-                    onPress={onPressSwap}>
-                        <View style={styles.icon}>
-                            <SVGIcons.swap />
-                        </View>
-                        <SmallText size={3} textAlign='center'>Swap</SmallText>
-                    </TouchableOpacity>
-                </View>
-
+                        <TouchableOpacity
+                            onPress={onPressSwap}>
+                            <View style={styles.icon}>
+                                <SVGIcons.swap />
+                            </View>
+                            <SmallText size={3} textAlign='center'>Swap</SmallText>
+                        </TouchableOpacity>
+                    </View>
+                }
             </View>
 
         </ScreenWrapper>

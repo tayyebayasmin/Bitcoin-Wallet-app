@@ -67,7 +67,7 @@ const InstructionScreen = ({ navigation }: NativeStackScreenProps<any>) => {
                         variant='Null'
                         containerStyle={styles.button}
                         textStyle={{ color: AppColors.primary }}
-                    // onPress={() => {  }}
+                    onPress={() =>navigation.navigate(ScreenNames.STARTED)}
                     >
                         No Thanks
                     </Button>

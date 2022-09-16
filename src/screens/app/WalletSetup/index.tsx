@@ -1,0 +1,47 @@
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import React from 'react';
+import { Text, View } from 'react-native';
+import { ScreenWrapper } from 'react-native-screen-wrapper';
+import { FontFamily } from '~assets/fonts';
+import SVGIcons from '~assets/svg';
+import { Button } from '~components';
+import { MediumText, SmallText } from '~components/text';
+import { ScreenNames } from '~routes';
+import AppColors from '~utills/AppColors';
+import styles from './styles';
+
+const WalletSetup = ({ navigation }: NativeStackScreenProps<any>) => {
+
+    return (
+        <ScreenWrapper>
+            <View style={styles.container}>
+            <MediumText size={5} textStyles={styles.TopText}>Wallet Setup</MediumText>
+                <SmallText size={3.2} textAlign='center' textStyles={styles.text1}>Private keys never leave your device</SmallText>
+                <View style={styles.logo}>
+                    <SVGIcons.bitcoin />
+                </View>
+                <View style={styles.BottomContainer}>
+                <Button
+                    containerStyle={styles.button2}
+                    textStyle={{ fontFamily: FontFamily.poppinsSemiBold }}
+                    onPress={()=>{navigation.navigate(ScreenNames.MNEMONICS)}}                     
+                >
+                    Create A new Wallet
+                </Button>
+                <Button
+                    containerStyle={styles.button}
+                    textStyle={{ color:AppColors.primary}}
+                    variant='Null'
+                    onPress={()=>{navigation.navigate(ScreenNames.MNEMONICS_FIELDS)}}                     
+                >
+                    I already have a Wallet
+                </Button>
+            
+                <SmallText size={2.7} textAlign='justify' textStyles={styles.BottomText}>By proceeding, you agree to these Terms and Conditions.</SmallText>
+                </View>
+            </View>
+        </ScreenWrapper>
+    );
+};
+
+export default WalletSetup;

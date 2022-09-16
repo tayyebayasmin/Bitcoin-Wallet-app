@@ -37,6 +37,9 @@ const styles = StyleSheet.create({
     alignItems:'center'
     
    },
+   extra:{
+    marginLeft:width(10)
+   },
    txt:{
     marginHorizontal:width(1)
    },

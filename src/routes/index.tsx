@@ -24,9 +24,26 @@ import {
   RecieveCoin,
   BuyCoin,
   PaymentScreen,
+  Swap,
+  NftScreen,
+  DiscoverScreen,
+  MultiCoinWallet,
+  WalletDetail,
+  BackupWallet,
+  EmptyWallet,
+  WalletConnect,
+  PriceAlerts,
+  SelectAsset,
+  Currency,
+  Preferences,
+  NodeSettings,
+  Security,
+  PushNotification,
+  Scan,
 } from '~screens/app';
 import NotificationScreen from '~screens/app/Notification';
 import SendScreen from '~screens/app/send';
+import WalletSetup from '~screens/app/WalletSetup';
 import {selectIsLoggedIn} from '~store/slices/user';
 import {BackupMnemonics, MnemonicsFeilds, MnemonicsScreen, SetupPasscode} from '../screens/auth';
 import ScreenNames from './routes';
@@ -67,6 +84,23 @@ const Routes = () => {
           <Stack.Screen name={ScreenNames.RECIEVECOINS} component={RecieveCoin} /> 
           <Stack.Screen name={ScreenNames.BUYCOIN} component={BuyCoin} /> 
           <Stack.Screen name={ScreenNames.PAYMENT} component={PaymentScreen} /> 
+          <Stack.Screen name={ScreenNames.SWAPSCREEN} component={Swap} /> 
+          <Stack.Screen name={ScreenNames.NFT_Screen} component={NftScreen} /> 
+          <Stack.Screen name={ScreenNames.DISCOVERSCREEN} component={DiscoverScreen} /> 
+          <Stack.Screen name={ScreenNames.MULTICOINWALLET} component={MultiCoinWallet} /> 
+          <Stack.Screen name={ScreenNames.WALLETSETUP} component={WalletSetup} /> 
+          <Stack.Screen name={ScreenNames.WALLETDETAIL} component={WalletDetail} /> 
+          <Stack.Screen name={ScreenNames.BACKUPWALLET} component={BackupWallet} /> 
+          <Stack.Screen name={ScreenNames.EMPTYWALLET} component={EmptyWallet} /> 
+          <Stack.Screen name={ScreenNames.WALLETCONNECT} component={WalletConnect} /> 
+          <Stack.Screen name={ScreenNames.PRICEALERTS} component={PriceAlerts} /> 
+          <Stack.Screen name={ScreenNames.SELECTASSET} component={SelectAsset} /> 
+          <Stack.Screen name={ScreenNames.PREFERENCES} component={Preferences} /> 
+          <Stack.Screen name={ScreenNames.CURRENCY} component={Currency} /> 
+          <Stack.Screen name={ScreenNames.NODESETTINGS} component={NodeSettings} /> 
+          <Stack.Screen name={ScreenNames.SECURITY} component={Security} /> 
+          <Stack.Screen name={ScreenNames.PUSHNOTIFICATION} component={PushNotification} /> 
+          <Stack.Screen name={ScreenNames.SCANSCREEN} component={Scan} /> 
           
         </Stack.Navigator>
     </NavigationContainer>

@@ -39,15 +39,21 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
   const onPressSetting = () => {
     setSettingModalVisible(!SettingmodalVisible)
   }
+  const onPressSwap = () => {
+    navigation.navigate(ScreenNames.SWAPSCREEN)
 
+  }
 
   return (
     <ScreenWrapper >
       <View style={styles.container}>
         <HomeCard
+          iconRow={true}
+          profileShow={true}
           onPressNotification={OnPressNotification}
           onPressSetting={onPressSetting}
-          // onPressScan={}
+          onPressSwap={onPressSwap}
+          // onPressScan={() => { navigation.navigate(ScreenNames.SCANSCREEN) }}
           onPressSend={() => { navigation.navigate(ScreenNames.SENDSCREEN) }}
           onPressRecieve={() => { navigation.navigate(ScreenNames.RECIEVESCREEN) }}
           onPressBuy={() => { navigation.navigate(ScreenNames.BUYSCREEN) }}
@@ -136,7 +142,12 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
         </View>
       }
 
-      <BottomBar />
+      <BottomBar
+        OnPressWallet={() => navigation.navigate(ScreenNames.HOMESCREEN)}
+        OnPressSwap={() => navigation.navigate(ScreenNames.SWAPSCREEN)}
+        OnPressNFTs={() => navigation.navigate(ScreenNames.NFT_Screen)}
+        OnPressDiscover={() => navigation.navigate(ScreenNames.DISCOVERSCREEN)}
+      />
       <ReactNativeModal
         isVisible={SettingmodalVisible}
         onBackdropPress={() => { setSettingModalVisible(!SettingmodalVisible) }} // Android back press
@@ -161,7 +172,8 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
           showsVerticalScrollIndicator={false}
           style={{ marginTop: width(10) }}
         >
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(ScreenNames.MULTICOINWALLET)}>
             <View style={styles.left}>
               <SVGIcons.SETTINGWALLET />
               <View style={{ marginLeft: width(2) }}>
@@ -194,7 +206,9 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity> */}
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(ScreenNames.SECURITY)}>
+
             <View style={styles.left}>
               <SVGIcons.security />
               <View style={{ marginLeft: width(2) }}>
@@ -206,7 +220,9 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(ScreenNames.PUSHNOTIFICATION)}>
+
             <View style={styles.left}>
               <SVGIcons.pushnoti />
               <View style={{ marginLeft: width(2) }}>
@@ -218,7 +234,9 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(ScreenNames.NODESETTINGS)}>
+
             <View style={styles.left}>
               <SVGIcons.nodesetting />
               <View style={{ marginLeft: width(2) }}>
@@ -230,7 +248,9 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(ScreenNames.PREFERENCES)}>
+
             <View style={styles.left}>
               <SVGIcons.preference />
               <View style={{ marginLeft: width(2) }}>
@@ -242,7 +262,8 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(ScreenNames.PRICEALERTS)}>
             <View style={styles.left}>
               <SVGIcons.procealert />
               <View style={{ marginLeft: width(2) }}>
@@ -254,7 +275,8 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(ScreenNames.WALLETCONNECT)}>
             <View style={styles.left}>
               <SVGIcons.walletconnect />
               <View style={{ marginLeft: width(2) }}>
