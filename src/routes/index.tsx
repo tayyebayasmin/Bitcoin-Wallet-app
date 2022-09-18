@@ -40,6 +40,7 @@ import {
   Security,
   PushNotification,
   Scan,
+  FacePasscode,
 } from '~screens/app';
 import NotificationScreen from '~screens/app/Notification';
 import SendScreen from '~screens/app/send';
@@ -101,6 +102,7 @@ const Routes = () => {
           <Stack.Screen name={ScreenNames.SECURITY} component={Security} /> 
           <Stack.Screen name={ScreenNames.PUSHNOTIFICATION} component={PushNotification} /> 
           <Stack.Screen name={ScreenNames.SCANSCREEN} component={Scan} /> 
+          <Stack.Screen name={ScreenNames.SCANPASSCODE} component={FacePasscode} /> 
           
         </Stack.Navigator>
     </NavigationContainer>

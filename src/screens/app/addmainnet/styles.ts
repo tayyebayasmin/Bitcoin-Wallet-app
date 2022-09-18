@@ -18,6 +18,7 @@ const Styles = StyleSheet.create({
         width:width(90)
     },
     input:{
+        backgroundColor:'#F7F9F8',
         width:width(70),
         marginHorizontal:width(3)
 
@@ -29,7 +30,7 @@ const Styles = StyleSheet.create({
         flexDirection:'row',
         alignItems:'center',
         paddingHorizontal:width(3),
-        backgroundColor:'#D6D6D6'
+        backgroundColor:'#F7F9F8'
     },
     button:{
       marginVertical:width(5),

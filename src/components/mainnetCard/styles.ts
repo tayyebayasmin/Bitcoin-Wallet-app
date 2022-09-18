@@ -8,11 +8,12 @@ const styles = StyleSheet.create({
         margin:width(2),
         alignItems:'center',
         borderRadius:width(3),
-    
+           justifyContent:'center'
     },
     containerStyle:{
         borderWidth:width(0.2),
         borderColor:AppColors.primary,
+ 
 
     },
     text:{

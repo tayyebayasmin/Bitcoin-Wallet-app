@@ -99,14 +99,45 @@ import tron from './tron.svg'
 import avax2 from './avax2.svg'
 import klay from './klay.svg'
 import terra from './terra.svg'
+import blueface from './blueface.svg'
 import casper from './casper.svg'
 import solana from './solana.svg'
 import wallet2 from './wallet2.svg'
 import dot from './dot3.svg'
+import face from './face.svg'
+import bluefinger from './bluefinger.svg'
 import deletesvg from './deletesvg.svg'
 import save from './save.svg'
 import error from './error.svg'
+import binanceb from './binanceb.svg'
+import fantom from './fantom.svg'
+import injective from './injective.svg'
+import okx from './okx.svg'
+import dash from './dash.svg'
+import polygon from './polygon.svg'
+import avaxc from './avaxc.svg'
+import klayb from './klayb.svg'
+import terrab from './terrab.svg'
+import filecoin from './filecoin.svg'
+import tronb from './tronb.svg'
+import near from './near.svg'
+import solanab from './solanab.svg'
+import doge from './doge.svg'
 const SVGIcons = {
+    doge,
+    solanab,
+    near,
+    tronb,
+    filecoin,
+    terrab,
+    binanceb,
+    fantom,
+    injective,
+    okx,
+    dash,
+    polygon,
+    avaxc,
+    klayb,
     error,
     save,
     deletesvg,
@@ -115,6 +146,7 @@ const SVGIcons = {
     wallet2,
     casper,
     terra,
+    blueface,
     klay,
     avax2,
     tron,
@@ -126,6 +158,8 @@ const SVGIcons = {
     Icollection1,
     Icollection2,
     Icollection3,
+    bluefinger,
+    face,
     Icollection4,
     Icollection5,
     polygonSmall,

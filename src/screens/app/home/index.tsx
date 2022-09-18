@@ -10,7 +10,7 @@ import { LargeText, SmallText } from '~components/text';
 import { ScreenNames } from '~routes';
 import { FontFamily } from '~assets/fonts';
 import { height, width } from '~utills/Dimensions';
-import { MyMainnets } from '~utills/DummyData';
+import { Mainnets } from '~utills/DummyData';
 import modal, { ReactNativeModal } from "react-native-modal";
 import { Text } from 'react-native-svg';
 
@@ -53,7 +53,7 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
           onPressNotification={OnPressNotification}
           onPressSetting={onPressSetting}
           onPressSwap={onPressSwap}
-          // onPressScan={() => { navigation.navigate(ScreenNames.SCANSCREEN) }}
+          onPressScan={() => { navigation.navigate(ScreenNames.SCANSCREEN) }}
           onPressSend={() => { navigation.navigate(ScreenNames.SENDSCREEN) }}
           onPressRecieve={() => { navigation.navigate(ScreenNames.RECIEVESCREEN) }}
           onPressBuy={() => { navigation.navigate(ScreenNames.BUYSCREEN) }}
@@ -97,19 +97,20 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
       {!touchedNft &&
         <>
           <ScrollView>
-            {MyMainnets.map((mainnet) => {
+            {Mainnets.map((mainnet) => {
               return (
+                mainnet.enabled &&
                 <TouchableOpacity>
                   <View style={styles.mainContainer}>
 
-                    <SVGIcons.bitcoinMainnet />
+                    <mainnet.icon />
                     <View style={styles.textContainer}>
-                      <SmallText size={4} fontFamily={FontFamily.poppinsSemiBold}>AVAX_c</SmallText>
-                      <SmallText color={AppColors.grey50}>$ 22.698</SmallText>
+                      <SmallText size={4} fontFamily={FontFamily.poppinsSemiBold}>{mainnet.name}</SmallText>
+                      <SmallText color={AppColors.grey50}>$ {mainnet.price}</SmallText>
                     </View>
                     <View style={{ right: 0, position: 'absolute' }}>
-                      <SmallText textAlign='left' size={4} fontFamily={FontFamily.poppinsSemiBold}>  0.00</SmallText>
-                      <SmallText textAlign='left' color={AppColors.grey50}>$0.00</SmallText>
+                      <SmallText textAlign='left' size={4} fontFamily={FontFamily.poppinsSemiBold}>  {mainnet.mysaving}</SmallText>
+                      <SmallText textAlign='left' color={AppColors.grey50}>${mainnet.myremaining}</SmallText>
                     </View>
                   </View>
                 </TouchableOpacity>

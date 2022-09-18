@@ -15,14 +15,16 @@ interface Props {
     onPresscard?: () => void;
     containerStyle?: ViewStyle;
     name: string;
+    select?:Boolean
 }
 
 const MainnetCard = ({
     onPresscard,
     name = 'Bitcoin',
+    select,
     icon = <SVGIcons.bitcoinMainnet />
 }: Props) => {
-    const [touched,setTouched]=useState(false)
+    const [touched,setTouched]=useState(select)
     const onPress=()=>{
         onPresscard
         setTouched(!touched)
@@ -41,7 +43,7 @@ const MainnetCard = ({
             </SmallText>
             { 
             touched&&
-            <View style={{position:'absolute',alignSelf:'flex-end',paddingBottom:width(3)}}>
+            <View style={{position:'absolute',alignSelf:'flex-end',top:-10,paddingTop:width(0)}}>
             <SVGIcons.select/>
             </View>
             }

@@ -7,7 +7,10 @@ export const Mainnets = [
     icon: SVGIcons.bitcoinMainnet,
     enabled: true,
     recieve: "0",
-    Nickname: 'BTC'
+    Nickname: 'BTC',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
 
 
   },
@@ -17,129 +20,174 @@ export const Mainnets = [
     icon: SVGIcons.Ethereum,
     enabled: true,
     recieve: '0',
-    Nickname: 'ETH'
+    Nickname: 'ETH',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
   },
   {
     id: 3,
     name: 'AVAX-C',
-    icon: SVGIcons.bitcoinMainnet,
-    enabled: false,
+    icon: SVGIcons.avaxc,
+    enabled: true,
     recieve: '0',
-    Nickname: 'ALAX'
+    Nickname: 'AVAX',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
 
   },
   {
     id: 4,
     name: 'KLAY',
-    icon: SVGIcons.bitcoinMainnet,
+    icon: SVGIcons.klayb,
+    enabled: true,
+    recieve: '0',
+    Nickname: 'KLAY',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
+  },
+  {
+    id: 5,
+    name: 'Terra',
+    icon: SVGIcons.terrab,
+    enabled: false,
+    recieve: "0",
+    Nickname: 'TER',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
+
+
+  },
+  {
+    id: 6,
+    name: 'Filecoin',
+    icon: SVGIcons.filecoin,
     enabled: false,
     recieve: '0',
-    Nickname: 'KLAY'
+    Nickname: 'FIL',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
+  },
+  {
+    id: 7,
+    name: 'Tron',
+    icon: SVGIcons.tronb,
+    enabled: true,
+    recieve: '0',
+    Nickname: 'TRON',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
+
+  },
+  {
+    id: 8,
+    name: 'Doge',
+    icon: SVGIcons.doge,
+    enabled: true,
+    recieve: '0',
+    Nickname: 'DOGE',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
   },
   {
     id: 1,
-    name: 'Bitcoin',
-    icon: SVGIcons.bitcoinMainnet,
+    name: 'NEAR',
+    icon: SVGIcons.near,
     enabled: true,
     recieve: "0",
-    Nickname: 'BTC'
+    Nickname: 'NEAR',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
 
 
   },
   {
     id: 2,
-    name: 'Ethereum',
-    icon: SVGIcons.Ethereum,
+    name: 'Solana',
+    icon: SVGIcons.solanab,
     enabled: true,
     recieve: '0',
-    Nickname: 'ETH'
+    Nickname: 'SOL',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
   },
   {
     id: 3,
-    name: 'AVAX-C',
-    icon: SVGIcons.bitcoinMainnet,
+    name: 'Dash',
+    icon: SVGIcons.dash,
     enabled: false,
     recieve: '0',
-    Nickname: 'ALAX'
+    Nickname: 'DASH',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
 
   },
   {
     id: 4,
-    name: 'KLAY',
-    icon: SVGIcons.bitcoinMainnet,
+    name: 'OKX Chain',
+    icon: SVGIcons.okx,
     enabled: false,
     recieve: '0',
-    Nickname: 'KLAY'
+    Nickname: 'OKX',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
   },
   {
     id: 1,
-    name: 'Bitcoin',
-    icon: SVGIcons.bitcoinMainnet,
-    enabled: true,
+    name: 'Polygon',
+    icon: SVGIcons.polygon,
+    enabled: false,
     recieve: "0",
-    Nickname: 'BTC'
+    Nickname: 'POL',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
 
 
   },
   {
     id: 2,
-    name: 'Ethereum',
-    icon: SVGIcons.Ethereum,
-    enabled: true,
+    name: 'Injective Protocol',
+    icon: SVGIcons.injective,
+    enabled: false,
     recieve: '0',
-    Nickname: 'ETH'
+    Nickname: 'INT',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
   },
   {
     id: 3,
-    name: 'AVAX-C',
-    icon: SVGIcons.bitcoinMainnet,
+    name: 'Fantom',
+    icon: SVGIcons.fantom,
     enabled: false,
     recieve: '0',
-    Nickname: 'ALAX'
-
-  },
-  {
-    id: 4,
-    name: 'KLAY',
-    icon: SVGIcons.bitcoinMainnet,
-    enabled: false,
-    recieve: '0',
-    Nickname: 'KLAY'
-  },
-  {
-    id: 1,
-    name: 'Bitcoin',
-    icon: SVGIcons.bitcoinMainnet,
-    enabled: true,
-    recieve: "0",
-    Nickname: 'BTC'
-
-
-  },
-  {
-    id: 2,
-    name: 'Ethereum',
-    icon: SVGIcons.Ethereum,
-    enabled: true,
-    recieve: '0',
-    Nickname: 'ETH'
-  },
-  {
-    id: 3,
-    name: 'AVAX-C',
-    icon: SVGIcons.bitcoinMainnet,
-    enabled: false,
-    recieve: '0',
-    Nickname: 'ALAX'
+    Nickname: 'FAN',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
 
   },
   {
     id: 3,
-    name: 'AVAX-C',
-    icon: SVGIcons.bitcoinMainnet,
+    name: 'Binance',
+    icon: SVGIcons.binanceb,
     enabled: false,
     recieve: '0',
-    Nickname: 'ALAX'
+    Nickname: 'BNB',
+    price: 22.698,
+    mysaving: ' 0.00',
+    myremaining: '0.00',
 
   },
 
@@ -392,14 +440,45 @@ export const priceAlert = [
 
 
 export const priceMainnets = [
-  'USD - US Dollar',
-  'GBPP - British Pound',
-  'EUR - Euro',
-  'AUD - Australian Dollar',
-  'RUB - Russian Ruble',
-  'BTC - Bitcoin',
-  'ETC - Ethereum',
-  'BNB - BNB Beacon Chaim'
+  {
+    FULLNAME: 'USD - US Dollar',
+    short: 'USD',
+    sign:'$'
+  },
+  {
+    FULLNAME: 'GBPP - British Pound',
+    short: 'GBPP',
+    sign:'£'
+  }
+  ,
+  {
+    FULLNAME: 'EUR - Euro',
+    short: 'EUR',
+    sign:'€'
+  }
+  ,
+  {
+    FULLNAME:'AUD - Australian Dollar',
+    short: 'AUD',
+    sign:'AU$'
+  },
+  {
+    FULLNAME: 'BTC - Bitcoin',
+    short: 'BTC',
+    sign:'₿'
+  }
+  ,
+  {
+    FULLNAME: 'ETC - Ethereum',
+    short: 'ETC',
+    sign:'Ξ'
+  }
+  ,
+  {
+    FULLNAME: 'BNB - BNB Beacon Chaim',
+    short: 'BNB',
+    sign:'$'
+  }
 ]
 
 export const priceMainnetsAll = [

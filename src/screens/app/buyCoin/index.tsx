@@ -13,11 +13,11 @@ import { ScreenNames } from '~routes';
 
 
 const BuyCoin = ({ navigation, route }: NativeStackScreenProps<any>) => {
-    const { name, nickname } = route.params
+    const { name, nickname,currencyname } = route.params
+    const [showcurrency, setShowCurrency] = useState('USD')
     const [showprice, setPrice] = useState('100')
     const PriceHandler = (price) => {
         setPrice(`${showprice}` + price)
-        console.log(showprice)
     }
     return (
         <ScreenWrapper
@@ -32,12 +32,17 @@ const BuyCoin = ({ navigation, route }: NativeStackScreenProps<any>) => {
 
                     </TouchableOpacity>
                     <SmallText size={4.5} fontFamily={FontFamily.poppinsSemiBold} color={AppColors.black} >Buy {nickname}</SmallText>
+                    <TouchableOpacity
+                    onPress={()=>{navigation.navigate(ScreenNames.CURRENCY)}}>
                     <View style={{ alignItems: 'center', backgroundColor: '#D5EBFE', borderRadius: width(5), padding: width(2), width: width(17) }}>
-                        <SmallText size={4} fontFamily={FontFamily.poppinsSemiBold} color={AppColors.primary} >USD</SmallText>
+                        <SmallText size={4} fontFamily={FontFamily.poppinsSemiBold} color={AppColors.primary} >
+                            {currencyname==undefined ? showcurrency: currencyname.item.short}
+                        </SmallText>
                     </View>
+                    </TouchableOpacity>
                 </View>
                 <View style={{ height: height(30), justifyContent: 'center' }}>
-                    <SmallText textAlign='center' size={10} fontFamily={FontFamily.poppinsSemiBold}>${showprice}</SmallText>
+                    <SmallText textAlign='center' size={10} fontFamily={FontFamily.poppinsSemiBold}> {currencyname==undefined ? '$': currencyname.item.sign} {showprice}</SmallText>
                     <SmallText size={5}>~0.006685 {nickname}</SmallText>
                 </View>
                 <View style={styles.middlebox}>

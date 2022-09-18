@@ -26,34 +26,44 @@ const Currency = ({ navigation }: NativeStackScreenProps<any>) => {
 
             </View>
             <ScrollView>
-            <View style={{ margin: width(4) }}>
-                <SmallText color={AppColors.primary}>Popular</SmallText>
-            </View>
-            {
-                priceMainnets.map((item) => {
-                    return (
-                        <View style={{margin:width(2),marginHorizontal:width(4)}}>
-                            <SmallText>{item}</SmallText>
-                        </View>
-                    )
-                })
-            }
-             <View style={{ margin: width(4) }}>
-                <SmallText color={AppColors.primary}>All</SmallText>
-            </View>
-            {
-                priceMainnetsAll.map((item) => {
-                    return (
-                        <TouchableOpacity>
-                        <View style={{margin:width(2),marginHorizontal:width(4)}}>
-                            <SmallText>{item}</SmallText>
-                        </View>
-                        </TouchableOpacity>
-                    )
-                })
-            }
+                <View style={{ margin: width(4) }}>
+                    <SmallText color={AppColors.primary}>Popular</SmallText>
+                </View>
+                {
+                    priceMainnets.map((item) => {
+                        return (
+                            <TouchableOpacity
+                                onPress={() => {
+                                    navigation.navigate(ScreenNames.BUYCOIN, {
+                                        currencyname: { item }
+
+                                    })
+                                }
+                            }
+                        >
+                                <View style={{ margin: width(2), marginHorizontal: width(4) }}>
+                                    <SmallText>{item.FULLNAME}</SmallText>
+                                </View>
+                            </TouchableOpacity>
+                        )
+                    })
+                }
+                <View style={{ margin: width(4) }}>
+                    <SmallText color={AppColors.primary}>All</SmallText>
+                </View>
+                {
+                    priceMainnetsAll.map((item) => {
+                        return (
+                            <TouchableOpacity>
+                                <View style={{ margin: width(2), marginHorizontal: width(4) }}>
+                                    <SmallText>{item}</SmallText>
+                                </View>
+                            </TouchableOpacity>
+                        )
+                    })
+                }
             </ScrollView>
-        </>    
+        </>
     );
 }
 

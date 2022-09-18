@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ScreenWrapper } from 'react-native-screen-wrapper';
 import AppColors from '~utills/AppColors';
 import styles from './styles';
-import { Modal, ScrollView, Switch, TouchableOpacity, View } from 'react-native';
+import { Modal, ScrollView, Switch, TextInput, TouchableOpacity, View } from 'react-native';
 import { BottomBar, Button, HomeCard } from '~components';
 import SVGIcons from '~assets/svg';
 import { LargeText, MediumText, SmallText } from '~components/text';
@@ -14,6 +14,7 @@ import modal, { ReactNativeModal } from "react-native-modal";
 
 
 const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
+  const [pay,setpay]=useState('0')
   const [SettingmodalVisible, setSettingModalVisible] = useState(false);
   const [touchedonSwap, setTouchedonSwap] = useState(true)
   const [touchedExchange, setTouchedExchange] = useState(false)
@@ -63,7 +64,15 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
           <View style={{ borderBottomWidth: width(0.2), flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginHorizontal: width(7), marginVertical: width(3) }}>
             <View>
               <SmallText>You pay</SmallText>
-              <SmallText fontFamily={FontFamily.poppinsSemiBold} size={5}>0</SmallText>
+            <TextInput
+            placeholder='0'
+            placeholderTextColor='black'
+            keyboardType='numeric'
+            style={{fontSize:width(5),fontFamily:FontFamily.poppinsSemiBold}}
+            onChangeText={(e)=>
+              setpay(e)
+            }
+            />
               <SmallText>Balance: 5 BNB</SmallText>
             </View>
             <View style={{ flexDirection: 'row' }}>
@@ -78,7 +87,7 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
           <View style={{ borderBottomWidth: width(0.2), flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginHorizontal: width(7), marginVertical: width(3) }}>
             <View>
               <SmallText>You Get</SmallText>
-              <SmallText fontFamily={FontFamily.poppinsSemiBold} size={5}>0</SmallText>
+              <SmallText fontFamily={FontFamily.poppinsSemiBold} size={5}>{pay}</SmallText>
               <SmallText>Balance: 0 BNB</SmallText>
             </View>
             <View style={{ flexDirection: 'row' }}>
@@ -91,18 +100,26 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </View>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: width(3), marginVertical: width(5) }}>
+            <TouchableOpacity>
             <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
               <MediumText size={4.3} textAlign='center'>25%</MediumText>
             </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
             <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
               <MediumText size={4.3} textAlign='center'>50%</MediumText>
             </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
             <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
               <MediumText size={4.3} textAlign='center'>75%</MediumText>
             </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
             <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
               <MediumText size={4.3} textAlign='center'>100%</MediumText>
             </View>
+            </TouchableOpacity>
           </View>
           <SmallText textAlign='center'>
             1 BNB = 248.21215487 Polkadot

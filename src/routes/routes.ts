@@ -10,6 +10,7 @@ const ScreenNames = {
   MULTICOINWALLET: 'MultiCoinWallet',
   WALLETSETUP: 'Walletsetup',
   SCANSCREEN:'Scan',
+  SCANPASSCODE:'FacePasscode',
   IMPORTSCREEN2: 'ImportScreen2',
   NFT_Screen: 'NftScreen',
   BACKUPWALLET: 'BackupWallet',

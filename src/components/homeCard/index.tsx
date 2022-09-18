@@ -78,7 +78,7 @@ const HomeCard = ({
                             <View style={styles.icon}>
                                 <SVGIcons.recieve />
                             </View>
-                            <SmallText size={3} textAlign='center'>Recieve</SmallText>
+                            <SmallText size={3} textAlign='center'>Receive</SmallText>
                         </TouchableOpacity>
 
                         <TouchableOpacity

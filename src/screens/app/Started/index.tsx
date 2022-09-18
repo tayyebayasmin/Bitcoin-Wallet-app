@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { ScreenWrapper } from 'react-native-screen-wrapper';
 import { FontFamily } from '~assets/fonts';
 import SVGIcons from '~assets/svg';
@@ -36,7 +36,12 @@ const StartedScreen = ({ navigation }: NativeStackScreenProps<any>) => {
                 >
                     Get Started
                 </Button>
-                <SmallText size={2.7} textAlign='justify' textStyles={styles.BottomText}>By proceeding, you agree to these Terms and Conditions.</SmallText>
+                <View style={{flexDirection:'row'}}>
+                <SmallText size={2.7} textAlign='justify' textStyles={styles.BottomText}>By proceeding, you agree to these</SmallText>
+                <TouchableOpacity>
+                <SmallText size={2.7} textAlign='justify' fontFamily={FontFamily.poppinsSemiBold} textStyles={styles.BottomText}> terms and conditions.</SmallText>
+                </TouchableOpacity>
+                </View>
                 </View>
             </View>
         </ScreenWrapper>

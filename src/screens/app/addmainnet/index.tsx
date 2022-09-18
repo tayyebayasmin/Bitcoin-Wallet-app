@@ -4,12 +4,12 @@ import { ScreenWrapper } from 'react-native-screen-wrapper';
 import AppColors from '~utills/AppColors';
 import styles from './styles';
 import { Modal, TextInput, View } from 'react-native';
-import SVGIcons, { AddSVG, WifiSVG } from '~assets/svg';
+import SVGIcons from '~assets/svg';
 import { LargeText, MediumText, SmallText } from '~components/text';
 import { height, width } from '~utills/Dimensions';
 import { FontFamily } from '~assets/fonts';
 import { ScreenNames } from '~routes';
-import { Button, CongratsModal, MainnetCard } from '~components';
+import { Button, MainnetCard } from '~components';
 import { Mainnets } from '~utills/DummyData';
 
 const AddMainnet = ({ navigation }: NativeStackScreenProps<any>) => {
@@ -62,7 +62,7 @@ const AddMainnet = ({ navigation }: NativeStackScreenProps<any>) => {
                     />
                 </View>
                 <SmallText size={5} fontFamily={FontFamily.poppinsSemiBold} textStyles={styles.toptext} >Top</SmallText>
-                <View style={{ flexDirection: 'row', flexWrap: 'wrap', width: width(100) }}>
+                <View style={{ flexDirection: 'row', flexWrap: 'wrap', width: width(96) }}>
                     {
                         filteredDataSource.map((mainnet, i) => {
                             return (
@@ -70,7 +70,7 @@ const AddMainnet = ({ navigation }: NativeStackScreenProps<any>) => {
                                     key={i + 1}
                                     name={mainnet.name}
                                     icon={<mainnet.icon />}
-                                // onPress={}
+                                    select={mainnet.enabled}
                                 />
                             );
                         })
