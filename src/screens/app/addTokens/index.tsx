@@ -9,6 +9,7 @@ import { LargeText, SmallText } from '~components/text';
 import { height, width } from '~utills/Dimensions';
 import { Mainnets, MyMainnets } from '~utills/DummyData';
 import SVGIcons from '~assets/svg';
+import { ScreenNames } from '~routes';
 
 const AddTokens = ({ navigation }: NativeStackScreenProps<any>) => {
     const [isEnabled, setIsEnabled] = useState(false);
@@ -84,9 +85,12 @@ const AddTokens = ({ navigation }: NativeStackScreenProps<any>) => {
 
                 }
             </ScrollView>
-
-            <BottomBar />
-            {/* </View> */}
+            <BottomBar
+                OnPressWallet={() => navigation.navigate(ScreenNames.HOMESCREEN)}
+                OnPressSwap={() => navigation.navigate(ScreenNames.SWAPSCREEN)}
+                OnPressNFTs={() => navigation.navigate(ScreenNames.NFT_Screen)}
+                OnPressDiscover={() => navigation.navigate(ScreenNames.DISCOVERSCREEN)}
+            />
         </ScreenWrapper >
     );
 };
