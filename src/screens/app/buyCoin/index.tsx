@@ -13,7 +13,7 @@ import { ScreenNames } from '~routes';
 
 
 const BuyCoin = ({ navigation, route }: NativeStackScreenProps<any>) => {
-    const { name, nickname,currencyname } = route.params
+    const {name, nickname,currencyname } = route.params
     const [showcurrency, setShowCurrency] = useState('USD')
     const [showprice, setPrice] = useState('100')
     const PriceHandler = (price) => {

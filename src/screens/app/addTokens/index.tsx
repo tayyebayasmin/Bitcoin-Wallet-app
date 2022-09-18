@@ -25,7 +25,6 @@ const AddTokens = ({ navigation }: NativeStackScreenProps<any>) => {
                 const textData = text.toUpperCase();
                 return itemData.indexOf(textData) > -1;
             });
-            console.log(newData)
             setFilteredDataSource(newData);
             setSearch(text);
         } else {
@@ -33,9 +32,6 @@ const AddTokens = ({ navigation }: NativeStackScreenProps<any>) => {
             setSearch(text);
         }
     };
-
-    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-
     return (
         <ScreenWrapper>
             {/* <View style={{height:height(100)}}> */}
@@ -73,8 +69,9 @@ const AddTokens = ({ navigation }: NativeStackScreenProps<any>) => {
                                     style={{ left: width(1) }}
                                     thumbColor={isEnabled ? "#3C95FF" : AppColors.white}
                                     ios_backgroundColor="#3e3e3e"
-                                    onValueChange={toggleSwitch}
-                                    value={Mainnet.enabled}
+                                    onValueChange={() => setIsEnabled(!isEnabled)}
+                                    value={isEnabled}
+                                    // t=
                                 />
 
                             </View>

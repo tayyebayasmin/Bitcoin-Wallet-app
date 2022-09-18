@@ -174,7 +174,10 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
           style={{ marginTop: width(10) }}
         >
           <TouchableOpacity
-            onPress={() => navigation.navigate(ScreenNames.MULTICOINWALLET)}>
+            onPress={() => {
+              navigation.navigate(ScreenNames.MULTICOINWALLET)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
             <View style={styles.left}>
               <SVGIcons.SETTINGWALLET />
               <View style={{ marginLeft: width(2) }}>
@@ -208,7 +211,10 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
           </TouchableOpacity> */}
 
           <TouchableOpacity
-            onPress={() => navigation.navigate(ScreenNames.SECURITY)}>
+            onPress={() => {
+              navigation.navigate(ScreenNames.SECURITY)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
 
             <View style={styles.left}>
               <SVGIcons.security />
@@ -222,7 +228,10 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate(ScreenNames.PUSHNOTIFICATION)}>
+            onPress={() => {
+              navigation.navigate(ScreenNames.PUSHNOTIFICATION)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
 
             <View style={styles.left}>
               <SVGIcons.pushnoti />
@@ -236,8 +245,10 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate(ScreenNames.NODESETTINGS)}>
-
+            onPress={() => {
+              navigation.navigate(ScreenNames.NODESETTINGS)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
             <View style={styles.left}>
               <SVGIcons.nodesetting />
               <View style={{ marginLeft: width(2) }}>
@@ -250,8 +261,10 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate(ScreenNames.PREFERENCES)}>
-
+            onPress={() => {
+              navigation.navigate(ScreenNames.PREFERENCES)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
             <View style={styles.left}>
               <SVGIcons.preference />
               <View style={{ marginLeft: width(2) }}>
@@ -264,7 +277,10 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate(ScreenNames.PRICEALERTS)}>
+            onPress={() => {
+              navigation.navigate(ScreenNames.PRICEALERTS)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>            
             <View style={styles.left}>
               <SVGIcons.procealert />
               <View style={{ marginLeft: width(2) }}>
@@ -277,8 +293,11 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate(ScreenNames.WALLETCONNECT)}>
-            <View style={styles.left}>
+            onPress={() => {
+              navigation.navigate(ScreenNames.WALLETCONNECT)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
+              <View style={styles.left}>
               <SVGIcons.walletconnect />
               <View style={{ marginLeft: width(2) }}>
                 <SmallText>Wallet Connect</SmallText>
