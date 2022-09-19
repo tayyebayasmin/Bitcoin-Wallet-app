@@ -39,8 +39,8 @@ const Currency = ({ navigation }: NativeStackScreenProps<any>) => {
 
                                     })
                                 }
-                            }
-                        >
+                                }
+                            >
                                 <View style={{ margin: width(2), marginHorizontal: width(4) }}>
                                     <SmallText>{item.FULLNAME}</SmallText>
                                 </View>
@@ -54,15 +54,21 @@ const Currency = ({ navigation }: NativeStackScreenProps<any>) => {
                 {
                     priceMainnetsAll.map((item) => {
                         return (
-                            <TouchableOpacity>
-                                <View style={{ margin: width(2), marginHorizontal: width(4) }}>
-                                    <SmallText>{item}</SmallText>
-                                </View>
+                            <TouchableOpacity
+                                onPress={() => {
+                                    navigation.navigate(ScreenNames.BUYCOIN, {
+                                        currencyname: { item }
+
+                                    })}}
+                                    >
+                                        <View style={{ margin: width(2), marginHorizontal: width(4) }}>
+                                            <SmallText>{item.FULLNAME}</SmallText>
+                                        </View>
                             </TouchableOpacity>
-                        )
+            )
                     })
                 }
-            </ScrollView>
+        </ScrollView>
         </>
     );
 }

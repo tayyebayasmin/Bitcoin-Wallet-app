@@ -60,7 +60,11 @@ const SelectAsset = ({ navigation }: NativeStackScreenProps<any>) => {
 
                         <TouchableOpacity
                             onPress={() =>
-                                navigation.navigate(ScreenNames.PRICEALERTS)
+                                navigation.navigate(ScreenNames.PRICEALERTS,
+                                {
+                                    item:Mainnet
+                                }
+                                )
                             }
                         >
                             <View style={styles.container}>
