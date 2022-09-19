@@ -15,30 +15,6 @@ const AddTokens = ({ navigation }: NativeStackScreenProps<any>) => {
     const [isEnabled, setIsEnabled] = useState(false);
     const [search, setSearch] = useState("");
     const [filteredDataSource, setFilteredDataSource] = useState(Mainnets);
-    const [toggles, setToggles] = useState([
-        ['text 1', false],
-        ['text 2', false],
-        ['text 3', false],
-        ['text 4', false],
-        ['text 5', false],
-        ['text 6', false],
-        ['text 7', false],
-        ['text 8', false],
-        ['text 9', false],
-        ['text 10', false],
-        ['text 11', false],
-        ['text 12', false],
-        ['text 13', false],
-        ['text 14', false],
-        ['text 15', false],
-        ['text 15', false],
-    ])
-    const handleChange = (index) => {
-        const newState = [...toggles]
-        newState[index] = [newState[index][0], !newState[index][1]]
-        setToggles(newState)
-      }
-
     const searchFilterFunction = (text: string) => {
         if (text) {
 
@@ -62,7 +38,7 @@ const AddTokens = ({ navigation }: NativeStackScreenProps<any>) => {
             <View style={{ backgroundColor: AppColors.primary, padding: width(3), flexDirection: 'row', alignItems: 'center' }}>
                 <TouchableOpacity
                     onPress={() => navigation.goBack()}
-                >
+                    >
                     <SVGIcons.leftArrow />
                 </TouchableOpacity>
                 <TextInput
@@ -81,8 +57,7 @@ const AddTokens = ({ navigation }: NativeStackScreenProps<any>) => {
             <ScrollView
                 showsVerticalScrollIndicator={false}
             >
-                {filteredDataSource.map((Mainnet,index) => {
-                    console.log(toggles[index][1])
+                {filteredDataSource.map((Mainnet) => {
                     return (
                         <View style={styles.container}>
 
@@ -94,10 +69,9 @@ const AddTokens = ({ navigation }: NativeStackScreenProps<any>) => {
                                     style={{ left: width(1) }}
                                     thumbColor={isEnabled ? "#3C95FF" : AppColors.white}
                                     ios_backgroundColor="#3e3e3e"
-                                    onValueChange={() => handleChange(index)}
-                                    value={toggles[index][1]}
-
-                                // t=
+                                    onValueChange={() => setIsEnabled(!isEnabled)}
+                                    value={isEnabled}
+                                    // t=
                                 />
 
                             </View>

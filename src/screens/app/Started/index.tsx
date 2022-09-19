@@ -34,7 +34,7 @@ const StartedScreen = ({ navigation }: NativeStackScreenProps<any>) => {
                     textStyle={{ fontFamily: FontFamily.poppinsSemiBold }}
                     onPress={()=>{navigation.navigate(ScreenNames.INSTRUCTION)}}                     
                 >
-                    Create New Wallet
+                    Get Started
                 </Button>
                 <View style={{flexDirection:'row'}}>
                 <SmallText size={2.7} textAlign='justify' textStyles={styles.BottomText}>By proceeding, you agree to these</SmallText>

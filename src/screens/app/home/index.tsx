@@ -99,6 +99,7 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
           <ScrollView>
             {Mainnets.map((mainnet) => {
               return (
+                mainnet.enabled &&
                 <TouchableOpacity>
                   <View style={styles.mainContainer}>
 
@@ -134,7 +135,7 @@ const Home = ({ navigation }: NativeStackScreenProps<any>) => {
         <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: width(20) }}>
           <SmallText>Collectibles will appear here</SmallText>
           <TouchableOpacity>
-            <SmallText color={AppColors.primary} size={4.3}>Receive</SmallText>
+            <SmallText color={AppColors.primary} size={4.3}>Recieve</SmallText>
           </TouchableOpacity>
           <TouchableOpacity>
             <SmallText color={AppColors.primary} size={4.3}>Open on OPenSea.io</SmallText>

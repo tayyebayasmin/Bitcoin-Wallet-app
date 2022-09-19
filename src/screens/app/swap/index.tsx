@@ -14,15 +14,10 @@ import modal, { ReactNativeModal } from "react-native-modal";
 
 
 const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
-  const [pay, setpay] = useState('0')
+  const [pay,setpay]=useState('0')
   const [SettingmodalVisible, setSettingModalVisible] = useState(false);
   const [touchedonSwap, setTouchedonSwap] = useState(true)
   const [touchedExchange, setTouchedExchange] = useState(false)
-  const [touched, setTouched] = useState(false)
-  const [touched1, setTouched1] = useState(false)
-  const [touched2, setTouched2] = useState(false)
-  const [touched3, setTouched3] = useState(false)
-
   const OnPressNotification = () => {
     navigation.navigate(ScreenNames.NOTIFICATION)
   }
@@ -69,15 +64,15 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
           <View style={{ borderBottomWidth: width(0.2), flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginHorizontal: width(7), marginVertical: width(3) }}>
             <View>
               <SmallText>You pay</SmallText>
-              <TextInput
-                placeholder='0'
-                placeholderTextColor='black'
-                keyboardType='numeric'
-                style={{ fontSize: width(5), fontFamily: FontFamily.poppinsSemiBold }}
-                onChangeText={(e) =>
-                  setpay(e)
-                }
-              />
+            <TextInput
+            placeholder='0'
+            placeholderTextColor='black'
+            keyboardType='numeric'
+            style={{fontSize:width(5),fontFamily:FontFamily.poppinsSemiBold}}
+            onChangeText={(e)=>
+              setpay(e)
+            }
+            />
               <SmallText>Balance: 5 BNB</SmallText>
             </View>
             <View style={{ flexDirection: 'row' }}>
@@ -105,82 +100,25 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </View>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: width(3), marginVertical: width(5) }}>
-            <TouchableOpacity
-              onPress={() => {
-                setTouched(!touched)
-                setTouched1(false)
-                setTouched2(false)
-                setTouched3(false)
-              }}
-            >
-              {
-                !touched ?
-                  <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-                    <MediumText size={4.3} textAlign='center'>25%</MediumText>
-                  </View>
-                  :
-                    <View style={{ padding: width(1), backgroundColor: AppColors.primary, width: width(20), borderRadius: width(3) }}>
-                      <MediumText size={4.3} color={AppColors.white} textAlign='center'>25%</MediumText>
-                    </View>
-              }
+            <TouchableOpacity>
+            <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
+              <MediumText size={4.3} textAlign='center'>25%</MediumText>
+            </View>
             </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { 
-                setTouched3(!touched3)
-                setTouched1(false)
-                setTouched2(false)
-                setTouched(false)
-              }}
-            >
-              {
-                !touched3 ?
-                  <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-                    <MediumText size={4.3} textAlign='center'>50%</MediumText>
-                  </View>
-                  :
-                  <View style={{ padding: width(1), backgroundColor: AppColors.primary, width: width(20), borderRadius: width(3) }}>
-                    <MediumText size={4.3} color={AppColors.white} textAlign='center'>50%</MediumText>
-                  </View>
-              }
+            <TouchableOpacity>
+            <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
+              <MediumText size={4.3} textAlign='center'>50%</MediumText>
+            </View>
             </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { setTouched2(!touched2)
-                setTouched1(false)
-                setTouched(false)
-                setTouched3(false)
-              }}
-            >
-              {
-                !touched2 ?
-                  <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-                    <MediumText size={4.3} textAlign='center'>75%</MediumText>
-                  </View>
-                  :
-                  <View style={{ padding: width(1), backgroundColor: AppColors.primary, width: width(20), borderRadius: width(3) }}>
-                    <MediumText size={4.3} color={AppColors.white} textAlign='center'>75%</MediumText>
-                  </View>
-              }
+            <TouchableOpacity>
+            <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
+              <MediumText size={4.3} textAlign='center'>75%</MediumText>
+            </View>
             </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => { 
-                setTouched1(!touched1)
-                setTouched(false)
-                setTouched2(false)
-                setTouched3(false)
-              }}
-            >
-              {
-                !touched1 ?
-                  <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-                    <MediumText size={4.3} textAlign='center'>100%</MediumText>
-                  </View>
-                  :
-                  <>
-                    <View style={{ padding: width(1), backgroundColor: AppColors.primary, width: width(20), borderRadius: width(3) }}>
-                      <MediumText size={4.3} color={AppColors.white} textAlign='center'>100%</MediumText>
-                    </View>
-                  </>
-              }
+            <TouchableOpacity>
+            <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
+              <MediumText size={4.3} textAlign='center'>100%</MediumText>
+            </View>
             </TouchableOpacity>
           </View>
           <SmallText textAlign='center'>

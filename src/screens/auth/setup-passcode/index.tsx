@@ -24,7 +24,7 @@ const schema = Yup.object().shape({
     .required('Password is required!')
     .min(8)
     .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/,
-      "One Uppercase, One Lowercase, One Number and One Special Character"),
+      "One Uppercase, One Lowercase, One Number and one Special Character"),
   confirmPassword: Yup.string()
     .required('Confirm Password is required!')
     .oneOf([Yup.ref('password'), null], 'Passwords must match')
