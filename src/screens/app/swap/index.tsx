@@ -14,7 +14,7 @@ import modal, { ReactNativeModal } from "react-native-modal";
 
 
 const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
-  const [pay,setpay]=useState('0')
+  const [pay, setpay] = useState('0')
   const [SettingmodalVisible, setSettingModalVisible] = useState(false);
   const [touchedonSwap, setTouchedonSwap] = useState(true)
   const [touchedExchange, setTouchedExchange] = useState(false)
@@ -64,15 +64,15 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
           <View style={{ borderBottomWidth: width(0.2), flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginHorizontal: width(7), marginVertical: width(3) }}>
             <View>
               <SmallText>You pay</SmallText>
-            <TextInput
-            placeholder='0'
-            placeholderTextColor='black'
-            keyboardType='numeric'
-            style={{fontSize:width(5),fontFamily:FontFamily.poppinsSemiBold}}
-            onChangeText={(e)=>
-              setpay(e)
-            }
-            />
+              <TextInput
+                placeholder='0'
+                placeholderTextColor='black'
+                keyboardType='numeric'
+                style={{ fontSize: width(5), fontFamily: FontFamily.poppinsSemiBold }}
+                onChangeText={(e) =>
+                  setpay(e)
+                }
+              />
               <SmallText>Balance: 5 BNB</SmallText>
             </View>
             <View style={{ flexDirection: 'row' }}>
@@ -101,24 +101,24 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
           </View>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: width(3), marginVertical: width(5) }}>
             <TouchableOpacity>
-            <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-              <MediumText size={4.3} textAlign='center'>25%</MediumText>
-            </View>
+              <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
+                <MediumText size={4.3} textAlign='center'>25%</MediumText>
+              </View>
             </TouchableOpacity>
             <TouchableOpacity>
-            <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-              <MediumText size={4.3} textAlign='center'>50%</MediumText>
-            </View>
+              <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
+                <MediumText size={4.3} textAlign='center'>50%</MediumText>
+              </View>
             </TouchableOpacity>
             <TouchableOpacity>
-            <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-              <MediumText size={4.3} textAlign='center'>75%</MediumText>
-            </View>
+              <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
+                <MediumText size={4.3} textAlign='center'>75%</MediumText>
+              </View>
             </TouchableOpacity>
             <TouchableOpacity>
-            <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-              <MediumText size={4.3} textAlign='center'>100%</MediumText>
-            </View>
+              <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
+                <MediumText size={4.3} textAlign='center'>100%</MediumText>
+              </View>
             </TouchableOpacity>
           </View>
           <SmallText textAlign='center'>
@@ -162,7 +162,11 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
           showsVerticalScrollIndicator={false}
           style={{ marginTop: width(10) }}
         >
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate(ScreenNames.MULTICOINWALLET)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
             <View style={styles.left}>
               <SVGIcons.SETTINGWALLET />
               <View style={{ marginLeft: width(2) }}>
@@ -195,7 +199,12 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity> */}
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate(ScreenNames.SECURITY)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
+
             <View style={styles.left}>
               <SVGIcons.security />
               <View style={{ marginLeft: width(2) }}>
@@ -207,7 +216,12 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate(ScreenNames.PUSHNOTIFICATION)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
+
             <View style={styles.left}>
               <SVGIcons.pushnoti />
               <View style={{ marginLeft: width(2) }}>
@@ -219,7 +233,11 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate(ScreenNames.NODESETTINGS)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
             <View style={styles.left}>
               <SVGIcons.nodesetting />
               <View style={{ marginLeft: width(2) }}>
@@ -231,7 +249,11 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate(ScreenNames.PREFERENCES)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
             <View style={styles.left}>
               <SVGIcons.preference />
               <View style={{ marginLeft: width(2) }}>
@@ -243,7 +265,11 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate(ScreenNames.PRICEALERTS)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
             <View style={styles.left}>
               <SVGIcons.procealert />
               <View style={{ marginLeft: width(2) }}>
@@ -255,7 +281,11 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate(ScreenNames.WALLETCONNECT)
+              setSettingModalVisible(!SettingmodalVisible)
+            }}>
             <View style={styles.left}>
               <SVGIcons.walletconnect />
               <View style={{ marginLeft: width(2) }}>
