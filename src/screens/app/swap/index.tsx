@@ -105,27 +105,6 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
           </View>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: width(3), marginVertical: width(5) }}>
-<<<<<<< HEAD
-            <TouchableOpacity>
-              <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-                <MediumText size={4.3} textAlign='center'>25%</MediumText>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-                <MediumText size={4.3} textAlign='center'>50%</MediumText>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-                <MediumText size={4.3} textAlign='center'>75%</MediumText>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <View style={{ padding: width(1), backgroundColor: '#D5EBFE', width: width(20), borderRadius: width(3) }}>
-                <MediumText size={4.3} textAlign='center'>100%</MediumText>
-              </View>
-=======
             <TouchableOpacity
               onPress={() => {
                 setTouched(!touched)
@@ -202,7 +181,6 @@ const Swap = ({ navigation }: NativeStackScreenProps<any>) => {
                     </View>
                   </>
               }
->>>>>>> parent of 8efc187 (Revert "client review")
             </TouchableOpacity>
           </View>
           <SmallText textAlign='center'>
