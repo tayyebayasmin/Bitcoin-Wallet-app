@@ -7,15 +7,20 @@ import { Modal, ScrollView, Switch, TextInput, TouchableOpacity, View } from 're
 import { BottomBar } from '~components';
 import { LargeText, SmallText } from '~components/text';
 import { height, width } from '~utills/Dimensions';
-import { Mainnets, MyMainnets, priceAlert, priceMainnets } from '~utills/DummyData';
+import { priceAlert } from '~utills/DummyData';
 import SVGIcons from '~assets/svg';
 import { ScreenNames } from '~routes';
 
-const PriceAlerts = ({ navigation }: NativeStackScreenProps<any>) => {
+const PriceAlerts = ({ navigation, route }: NativeStackScreenProps<any>) => {
+    const item = route.params
     const [isEnabled, setIsEnabled] = useState(true);
+    var newdata=priceAlert
+    if(item!=undefined){
+        newdata=[...priceAlert,item.item]
+        
+    }
 
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-
     return (
         <ScreenWrapper>
             <View style={{ backgroundColor: AppColors.primary, padding: width(3.5), flexDirection: 'row', alignItems: 'center' }}>
@@ -55,7 +60,7 @@ const PriceAlerts = ({ navigation }: NativeStackScreenProps<any>) => {
             </View>
             {
                 isEnabled &&
-                priceAlert.map((item) => {
+                newdata.map((item) => {
                     return (
                         <View style={{ flexDirection: 'row', marginTop: width(5), marginLeft: width(5) }}>
                             <item.icon />

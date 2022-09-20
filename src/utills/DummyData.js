@@ -5,7 +5,7 @@ export const Mainnets = [
     id: 1,
     name: 'Bitcoin',
     icon: SVGIcons.bitcoinMainnet,
-    enabled: true,
+    enabled: false,
     recieve: "0",
     Nickname: 'BTC',
     price: 22.698,
@@ -18,7 +18,7 @@ export const Mainnets = [
     id: 2,
     name: 'Ethereum',
     icon: SVGIcons.Ethereum,
-    enabled: true,
+    enabled: false,
     recieve: '0',
     Nickname: 'ETH',
     price: 22.698,
@@ -29,7 +29,7 @@ export const Mainnets = [
     id: 3,
     name: 'AVAX-C',
     icon: SVGIcons.avaxc,
-    enabled: true,
+    enabled: false,
     recieve: '0',
     Nickname: 'AVAX',
     price: 22.698,
@@ -41,7 +41,7 @@ export const Mainnets = [
     id: 4,
     name: 'KLAY',
     icon: SVGIcons.klayb,
-    enabled: true,
+    enabled: false,
     recieve: '0',
     Nickname: 'KLAY',
     price: 22.698,
@@ -76,7 +76,7 @@ export const Mainnets = [
     id: 7,
     name: 'Tron',
     icon: SVGIcons.tronb,
-    enabled: true,
+    enabled: false,
     recieve: '0',
     Nickname: 'TRON',
     price: 22.698,
@@ -88,7 +88,7 @@ export const Mainnets = [
     id: 8,
     name: 'Doge',
     icon: SVGIcons.doge,
-    enabled: true,
+    enabled: false,
     recieve: '0',
     Nickname: 'DOGE',
     price: 22.698,
@@ -99,7 +99,7 @@ export const Mainnets = [
     id: 1,
     name: 'NEAR',
     icon: SVGIcons.near,
-    enabled: true,
+    enabled: false,
     recieve: "0",
     Nickname: 'NEAR',
     price: 22.698,
@@ -112,7 +112,7 @@ export const Mainnets = [
     id: 2,
     name: 'Solana',
     icon: SVGIcons.solanab,
-    enabled: true,
+    enabled: false,
     recieve: '0',
     Nickname: 'SOL',
     price: 22.698,
@@ -443,57 +443,92 @@ export const priceMainnets = [
   {
     FULLNAME: 'USD - US Dollar',
     short: 'USD',
-    sign:'$'
+    sign: '$'
   },
   {
     FULLNAME: 'GBPP - British Pound',
     short: 'GBPP',
-    sign:'£'
+    sign: '£'
   }
   ,
   {
     FULLNAME: 'EUR - Euro',
     short: 'EUR',
-    sign:'€'
+    sign: '€'
   }
   ,
   {
-    FULLNAME:'AUD - Australian Dollar',
+    FULLNAME: 'AUD - Australian Dollar',
     short: 'AUD',
-    sign:'AU$'
+    sign: 'AU$'
   },
   {
     FULLNAME: 'BTC - Bitcoin',
     short: 'BTC',
-    sign:'₿'
+    sign: '₿'
   }
   ,
   {
     FULLNAME: 'ETC - Ethereum',
     short: 'ETC',
-    sign:'Ξ'
+    sign: 'Ξ'
   }
   ,
   {
     FULLNAME: 'BNB - BNB Beacon Chaim',
     short: 'BNB',
-    sign:'$'
+    sign: '$'
   }
 ]
 
 export const priceMainnetsAll = [
-  'AED - US Dollar',
-  'AFN - British Pound',
-  'ALL - Euro',
-  'AMD - Australian Dollar',
-  'ANG - Russian Ruble',
-  'AOA - Bitcoin',
-  'ARS - Ethereum',
-  'AWG - BNB Beacon Chaim',
-  'AZN - Bitcoin',
-  'BAM - Ethereum',
-  'BBD - BNB Beacon Chaim',
-  'BDT - BNB Beacon Chaim'
+  {
+    FULLNAME: 'AED - US Dollar',
+    short: 'AED',
+    sign: '$'
+  },
+  {
+    FULLNAME:'AFN - British Pound',
+    short: 'AFN',
+    sign: '$'
+  }
+  ,
+  {
+    FULLNAME: 'ALL - Euro',
+    short: 'ALL',
+    sign: '$'
+  },
+  {
+    FULLNAME:'AMD - Australian Dollar',
+    short: 'AMD',
+    sign: '$'
+  }
+,
+{
+  FULLNAME:  'ANG - Russian Ruble',
+  short: 'ANG',
+  sign: '$'
+},
+{
+  FULLNAME: 'AOA - Bitcoin',
+  short: 'AOA',
+  sign: '$'
+},
+{
+  FULLNAME:'ARS - Ethereum',
+  short: 'ARS',
+  sign: '$'
+},
+{
+  FULLNAME:  'AWG - BNB Beacon Chaim',
+  short: 'AWG',
+  sign: '$'
+},
+{
+  FULLNAME:'BDT - BNB Beacon Chaim',
+  short: 'BDT',
+  sign: '$'
+}
 ]
 
 export const Node = [
